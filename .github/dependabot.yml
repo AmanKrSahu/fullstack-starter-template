@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm' # For the root-level package.json (if any dependencies are shared)
+    directory: '/' # Root directory where package.json is located
+    schedule:
+      interval: 'weekly' # Check for updates weekly
+  - package-ecosystem: 'npm' # For the client-specific dependencies
+    directory: '/client' # Location of client package.json
+    schedule:
+      interval: 'weekly' # Check for updates weekly
+  - package-ecosystem: 'npm' # For the server-specific dependencies
+    directory: '/server' # Location of server package.json
+    schedule:
+      interval: 'weekly' # Check for updates weekly
